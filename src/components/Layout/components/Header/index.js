@@ -1,8 +1,14 @@
-import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import images from '~/assets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
+import {
+    faCircleXmark,
+    faSpinner,
+    faMagnifyingGlass,
+} from '@fortawesome/free-solid-svg-icons';
+
+import images from '~/assets/images';
+import styles from './Header.module.scss';
+
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -23,12 +29,17 @@ function Header() {
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
 
-                    {/* loading */}
+                    <FontAwesomeIcon
+                        className={cx('loading')}
+                        icon={faSpinner}
+                    />
 
                     <button className={cx('search-btn')}>
-                        {/* Search icon */}
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
                 </div>
+
+                <div className={cx('actions')}>{/* actions */}</div>
             </div>
         </header>
     );
