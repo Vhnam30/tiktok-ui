@@ -1,7 +1,12 @@
+import Home from '~/pages/Home';
+import Following from '~/pages/Following';
+import { BrowerRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
     return (
         <div className="App">
-            <h1>TikTok App</h1>
+            <Home />
+            <Following />
         </div>
     );
 }
