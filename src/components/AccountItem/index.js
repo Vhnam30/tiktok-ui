@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 function AccountItem() {
     return (
         <div className={cx('wrapper')}>
-            <img className={cx('avatar')} src="" alt="Linhh " />
+            <img className={cx('avatar')} src="" alt="Linhh" />
         </div>
     );
 }
