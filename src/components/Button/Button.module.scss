@@ -21,28 +21,6 @@
 
 // button type
 
-.primary {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    &:hover {
-        background: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.06),
-                rgba(0, 0, 0, 0.06)
-            ),
-            #fe2c55;
-    }
-}
-
-.outline {
-    color: var(--primary-color);
-    border-color: currentColor;
-
-    &:hover {
-        background-color: rgba(254, 44, 85, 0.06);
-    }
-}
-
 .rounded {
     border-radius: 999px;
     border-color: rgba(22, 24, 35, 0.12);
@@ -51,6 +29,33 @@
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            #fe2c55;
+
+        border-color: var(--primary-color);
+    }
+}
+
+.outline {
+    color: var(--primary-color);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+
+        background-color: rgba(254, 44, 85, 0.06);
     }
 }
 
@@ -72,4 +77,26 @@
 .large {
     min-width: 140px;
     padding: 14px 16px;
+}
+
+.custom-upload {
+    color: #161823;
+    border-color: #f1f1f1;
+    font-weight: 500;
+    min-width: 114px;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+            font-size: 1.6rem;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        border-color: #f1f1f1;
+    }
 }

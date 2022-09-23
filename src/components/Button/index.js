@@ -10,15 +10,17 @@ function Button({
     primary = false,
     children,
     text = false,
-    onClick,
     disable,
     outline,
     small = false,
     large = false,
     rounded = false,
+    className,
+    onClick,
     ...passProps
 }) {
     let Comp = 'button';
+
     const props = { onClick, ...passProps };
 
     // remove event listener when btn is disabled
@@ -43,6 +45,7 @@ function Button({
         text,
         disable,
         rounded,
+        [className]: className,
     });
     return (
         <Comp className={classes} {...props}>

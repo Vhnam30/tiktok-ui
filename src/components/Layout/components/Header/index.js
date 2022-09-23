@@ -6,6 +6,7 @@ import {
     faCircleXmark,
     faSpinner,
     faMagnifyingGlass,
+    faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
@@ -43,8 +44,6 @@ function Header() {
                                 <h4 className={cx('search-title')}>Accounts</h4>
                                 <AccountItem />
                                 <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
                             </PopperWrapper>
                         </div>
                     )}
@@ -71,8 +70,11 @@ function Header() {
                 </Tippy>
 
                 <div className={cx('actions')}>
-                    <Button text>Upload</Button>
-                    <Button rounded>Log in</Button>
+                    <Button className={cx('custom-upload')} outline>
+                        <FontAwesomeIcon icon={faPlus} />
+                        Upload
+                    </Button>
+                    <Button primary>Log in</Button>
                 </div>
             </div>
         </header>
