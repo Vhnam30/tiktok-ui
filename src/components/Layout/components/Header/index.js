@@ -7,6 +7,7 @@ import {
     faSpinner,
     faMagnifyingGlass,
     faPlus,
+    faSignIn,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
@@ -44,6 +45,8 @@ function Header() {
                                 <h4 className={cx('search-title')}>Accounts</h4>
                                 <AccountItem />
                                 <AccountItem />
+                                <AccountItem />
+                                <AccountItem />
                             </PopperWrapper>
                         </div>
                     )}
@@ -74,6 +77,7 @@ function Header() {
                         <FontAwesomeIcon icon={faPlus} />
                         Upload
                     </Button>
+
                     <Button primary>Log in</Button>
                 </div>
             </div>
